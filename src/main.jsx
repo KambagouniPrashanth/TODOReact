@@ -2,15 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Home from './pages/Home.jsx'
-import GlobalProvider from './context/GlobalContext.jsx'
+import UserProvider from './context/UserContext.jsx'
+import TodoProvider from './context/TodoContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalProvider>
-      <App />
+    <UserProvider>
+            <TodoProvider>
+                <App/>
 
-    </GlobalProvider>
+            </TodoProvider>
+
+    </UserProvider>
     
     
   </React.StrictMode>,
